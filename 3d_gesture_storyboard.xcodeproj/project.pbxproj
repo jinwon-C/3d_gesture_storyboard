@@ -15,6 +15,7 @@
 		CD4289AC2397955A009BDDA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4289AA2397955A009BDDA1 /* LaunchScreen.storyboard */; };
 		CD4289B72397955A009BDDA1 /* _d_gesture_storyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4289B62397955A009BDDA1 /* _d_gesture_storyboardTests.swift */; };
 		CD4289C22397955A009BDDA1 /* _d_gesture_storyboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4289C12397955A009BDDA1 /* _d_gesture_storyboardUITests.swift */; };
+		CD8A8F7B23979AC50070BD1C /* AVTonePlayerUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8A8F7A23979AC50070BD1C /* AVTonePlayerUnit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CD4289BD2397955A009BDDA1 /* 3d_gesture_storyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3d_gesture_storyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4289C12397955A009BDDA1 /* _d_gesture_storyboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _d_gesture_storyboardUITests.swift; sourceTree = "<group>"; };
 		CD4289C32397955A009BDDA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD8A8F7A23979AC50070BD1C /* AVTonePlayerUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVTonePlayerUnit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				CD42899F23979558009BDDA1 /* AppDelegate.swift */,
+				CD8A8F7A23979AC50070BD1C /* AVTonePlayerUnit.swift */,
 				CD4289A123979558009BDDA1 /* SceneDelegate.swift */,
 				CD4289A323979558009BDDA1 /* ViewController.swift */,
 				CD4289A523979558009BDDA1 /* Main.storyboard */,
@@ -262,6 +265,7 @@
 				CD4289A423979558009BDDA1 /* ViewController.swift in Sources */,
 				CD4289A023979558009BDDA1 /* AppDelegate.swift in Sources */,
 				CD4289A223979558009BDDA1 /* SceneDelegate.swift in Sources */,
+				CD8A8F7B23979AC50070BD1C /* AVTonePlayerUnit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

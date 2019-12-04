@@ -11,14 +11,46 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioRecorderDelegate {
     
+    var engine : AVAudioEngine!
+    var tone : AVTonePlayerUnit!
     var recordingSession : AVAudioSession!
     var audioRecorder : AVAudioRecorder!
+    var audioSession = AVAudioSession.sharedInstance()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tone = AVTonePlayerUnit()
+        try! audioSession.setCategory(AVAudioSession.Category.multiRoute)
+        try! audioSession.setActive(true)
+        tone.frequency = 2000
+        let format = AVAudioFormat(standardFormatWithSampleRate: tone.sampleRate, channels: 1)
+        engine = AVAudioEngine()
+        engine.attach(tone)
+        let mixer = engine.mainMixerNode
+        engine.connect(tone, to:mixer, format : format)
+        do{
+            try engine.start()
+        } catch let error as NSError{
+            print(error)
+        }
+
     }
 
+    func toneGenerate(){
+        if tone.isPlaying{
+            engine.mainMixerNode.volume = 0.0
+            tone.stop()
+            engine.reset()
+        }
+        else {
+            tone.preparePlaying()
+            tone.play()
+            engine.mainMixerNode.volume = 1.0
+        }
+    }
+    
     func startRecording(){
         
         let audioSession = AVAudioSession.sharedInstance()
@@ -63,10 +95,12 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func generate(_ sender: Any) {
-        startRecording()
+            toneGenerate()
     }
     
     @IBAction func record(_ sender: Any) {
+        startRecording()
+
         finishRecording(success: true)
     }
     
