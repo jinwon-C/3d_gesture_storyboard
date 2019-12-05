@@ -11,12 +11,13 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioRecorderDelegate {
     
-    var engine : AVAudioEngine!
-    var tone : AVTonePlayerUnit!
-    var recordingSession : AVAudioSession!
-    var audioRecorder : AVAudioRecorder!
-    var audioSession = AVAudioSession.sharedInstance()
+    var engine              : AVAudioEngine!
+    var recordingSession    : AVAudioSession!
+    var audioRecorder       : AVAudioRecorder!
+    var tone                : AVTonePlayerUnit!
+    var audioSession        = AVAudioSession.sharedInstance()
 
+    var freq : Double = 2000
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         tone = AVTonePlayerUnit()
         try! audioSession.setCategory(AVAudioSession.Category.multiRoute)
         try! audioSession.setActive(true)
-        tone.frequency = 2000
+        tone.frequency = freq
         let format = AVAudioFormat(standardFormatWithSampleRate: tone.sampleRate, channels: 1)
         engine = AVAudioEngine()
         engine.attach(tone)
@@ -35,7 +36,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         } catch let error as NSError{
             print(error)
         }
-
     }
 
     func toneGenerate(){
@@ -94,14 +94,18 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder = nil
     }
 
-    @IBAction func generate(_ sender: Any) {
-            toneGenerate()
+    @IBAction func btGenerate(_ sender: Any) {
+        toneGenerate()
     }
     
-    @IBAction func record(_ sender: Any) {
+    @IBAction func btRecord(_ sender: Any) {
         startRecording()
+        let duration = DispatchTime.now() + .seconds(3)
+        DispatchQueue.main.asyncAfter(deadline: duration){
+            self.finishRecording(success: true)
+()
+        }
 
-        finishRecording(success: true)
     }
     
 }
