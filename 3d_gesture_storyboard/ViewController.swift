@@ -18,12 +18,20 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     var audioSession        = AVAudioSession.sharedInstance()
 
     var freq : Double = 2000
+    var count = 0
+    
+    @IBOutlet weak var state: UILabel!
+    @IBOutlet weak var btGenerate: UIButton!
+    @IBOutlet weak var btRecord: UIButton!
     
     override func viewDidLoad() {
+        
+        btRecord.setTitle("Record", for: .disabled)
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tone = AVTonePlayerUnit()
-        try! audioSession.setCategory(AVAudioSession.Category.multiRoute)
+        try! audioSession.setCategory(AVAudioSession.Category.playAndRecord)
         try! audioSession.setActive(true)
         tone.frequency = freq
         let format = AVAudioFormat(standardFormatWithSampleRate: tone.sampleRate, channels: 1)
@@ -40,20 +48,27 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
 
     func toneGenerate(){
         if tone.isPlaying{
+            btGenerate.setTitle("Generate", for: .normal)
+            btRecord.setTitle("Recording...", for: .normal)
+            
             engine.mainMixerNode.volume = 0.0
             tone.stop()
             engine.reset()
         }
         else {
-            engine.prepare()
+            
             tone.preparePlaying()
             tone.play()
             engine.mainMixerNode.volume = 1.0
+            
+            btGenerate.setTitle("Stop Generate", for: .normal)
+            btRecord.setTitle("Stop Record", for: .normal)
         }
     }
     
     func startRecording(){
         
+        audioSession.requestRecordPermission({(allowed:Bool) -> Void in print("Accepted")})
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setCategory(AVAudioSession.Category.playAndRecord)
         try! audioSession.setActive(true)
@@ -93,20 +108,45 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     func finishRecording(success:Bool){
         audioRecorder.stop()
         audioRecorder = nil
-    }
-
-    @IBAction func btGenerate(_ sender: Any) {
-        toneGenerate()
+        count += 1
+        state.text = String(count)
     }
     
-    @IBAction func btRecord(_ sender: Any) {
-        startRecording()
-        let duration = DispatchTime.now() + .seconds(3)
-        DispatchQueue.main.asyncAfter(deadline: duration){
-            self.finishRecording(success: true)
-()
-        }
+    
+    @IBAction func btG(_ sender: UIButton) {
+        toneGenerate()
+        state.text = "Button Pressed"
+        print("Button Pressed")
+    }
+    
+    @IBAction func btR(_ sender: UIButton) {
+        for count in 1 ... 5 {
+            print(count)
+            sleep(1)
+            state.text = "Recording..."
+            startRecording()
+            print("Recording Start")
 
+            sleep(3)
+            state.text = "Preparing"
+            finishRecording(success: true)
+            print("Record Finish")
+            
+//            let rduration = DispatchTime.now() + .seconds(1)
+//            DispatchQueue.global().sync {
+//                self.state.text = "Recording"
+//                self.startRecording()
+//                print("Recording Start")
+//            }
+//            sleep(3)
+//            let fduration = DispatchTime.now() + .seconds(3)
+//            DispatchQueue.global().sync {
+//                self.finishRecording(success: true)
+//                self.state.text = "Preparing"
+//                print("Record Finish")
+//            }
+        }
+        
     }
     
 }
