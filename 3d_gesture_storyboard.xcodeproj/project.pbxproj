@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4A308E22398D170009E41FA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A4A308E12398D170009E41FA /* README.md */; };
 		CD4289A023979558009BDDA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD42899F23979558009BDDA1 /* AppDelegate.swift */; };
 		CD4289A223979558009BDDA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4289A123979558009BDDA1 /* SceneDelegate.swift */; };
 		CD4289A423979558009BDDA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4289A323979558009BDDA1 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A4A308E12398D170009E41FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CD42899C23979558009BDDA1 /* 3d_gesture_storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3d_gesture_storyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD42899F23979558009BDDA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD4289A123979558009BDDA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		CD42899323979558009BDDA1 = {
 			isa = PBXGroup;
 			children = (
+				A4A308E12398D170009E41FA /* README.md */,
 				CD42899E23979558009BDDA1 /* 3d_gesture_storyboard */,
 				CD4289B52397955A009BDDA1 /* 3d_gesture_storyboardTests */,
 				CD4289C02397955A009BDDA1 /* 3d_gesture_storyboardUITests */,
@@ -237,6 +240,7 @@
 			files = (
 				CD4289AC2397955A009BDDA1 /* LaunchScreen.storyboard in Resources */,
 				CD4289A92397955A009BDDA1 /* Assets.xcassets in Resources */,
+				A4A308E22398D170009E41FA /* README.md in Resources */,
 				CD4289A723979558009BDDA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
