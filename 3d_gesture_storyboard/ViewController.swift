@@ -45,6 +45,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
             engine.reset()
         }
         else {
+            engine.prepare()
             tone.preparePlaying()
             tone.play()
             engine.mainMixerNode.volume = 1.0
