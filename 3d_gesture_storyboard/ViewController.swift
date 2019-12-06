@@ -18,16 +18,17 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     var audioSession        = AVAudioSession.sharedInstance()
 
     var freq : Double = 2000
-    var count = 0
+    var count = 1
+    var gesture = ""
+    
     
     @IBOutlet weak var state: UILabel!
     @IBOutlet weak var btGenerate: UIButton!
     @IBOutlet weak var btRecord: UIButton!
+    @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
-        
-        btRecord.setTitle("Record", for: .disabled)
-        
+                
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tone = AVTonePlayerUnit()
@@ -49,7 +50,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     func toneGenerate(){
         if tone.isPlaying{
             btGenerate.setTitle("Generate", for: .normal)
-            btRecord.setTitle("Recording...", for: .normal)
             
             engine.mainMixerNode.volume = 0.0
             tone.stop()
@@ -62,7 +62,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
             engine.mainMixerNode.volume = 1.0
             
             btGenerate.setTitle("Stop Generate", for: .normal)
-            btRecord.setTitle("Stop Record", for: .normal)
+           
         }
     }
     
@@ -78,7 +78,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         let format = DateFormatter()
         format.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let time = format.string(from: currentTime as Date)
-        let audioFilename = getDocumentsDirectory().appendingPathComponent(time+".wav")
+        let audioFilename = getDocumentsDirectory().appendingPathComponent(gesture+String(count)+" "+time+".wav")
         
         let settings = [
             AVFormatIDKey : Int(kAudioFormatLinearPCM),
@@ -94,6 +94,12 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
             audioRecorder = try AVAudioRecorder(url:audioFilename, settings: settings)
             audioRecorder.delegate = self
             audioRecorder.record()
+            
+            sleep(3)
+            
+            audioRecorder.stop()
+            audioRecorder = nil
+            
         } catch{
             finishRecording(success : false)
         }
@@ -108,8 +114,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     func finishRecording(success:Bool){
         audioRecorder.stop()
         audioRecorder = nil
-        count += 1
-        state.text = String(count)
     }
     
     
@@ -120,17 +124,41 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func btR(_ sender: UIButton) {
-        for count in 1 ... 5 {
+//        self.btRecord.setTitle("Recording...", for: .disabled)
+        
+        for _ in 1 ... 2 {
             print(count)
-            sleep(1)
-            state.text = "Recording..."
-            startRecording()
-            print("Recording Start")
-
+//            sleep(1)
+            
+//            let queue = DispatchQueue(label : 'jinwon')
+            self.state.text = "Recording..."
+            print("Recordin Start")
+            
+            print("Recording...")
+//            self.startRecording()
             sleep(3)
-            state.text = "Preparing"
-            finishRecording(success: true)
-            print("Record Finish")
+//            self.state.text = "Preparing"
+            print("Recording Finish")
+//            DispatchQueue.main.async {
+//
+//            }
+//            DispatchQueue.main.sync {
+//                self.startRecording()
+//            }
+//            print("Recording Start : ")
+//
+////            sleep(3)
+////            finishRecording(success: true)
+//
+////            self.state.text = "Preparing"
+//            DispatchQueue.main.sync {
+//                self.state.text = "Preparing"
+//            }
+//            print("Record Finish : ")
+            //state.text = gesture + String(count)
+            self.count += 1
+            
+            
             
 //            let rduration = DispatchTime.now() + .seconds(1)
 //            DispatchQueue.global().sync {
@@ -146,7 +174,12 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
 //                print("Record Finish")
 //            }
         }
-        
+        btRecord.setTitle("Record", for: .normal)
+    }
+    @IBAction func btM(_ sender: Any) {
+        self.count = 1
+        gesture = textField.text!
+        state.text = gesture
     }
     
 }

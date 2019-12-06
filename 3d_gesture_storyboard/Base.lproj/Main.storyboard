@@ -38,6 +38,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5n-l0-f8B">
+                                <rect key="frame" x="258" y="259" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Modify"/>
+                                <connections>
+                                    <action selector="btM:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lsg-uX-ndO"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Write Gesture" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cRG-g5-n1g">
+                                <rect key="frame" x="129" y="257" width="117" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -46,6 +60,7 @@
                         <outlet property="btGenerate" destination="BGP-YT-mXh" id="mwZ-fm-fv0"/>
                         <outlet property="btRecord" destination="7Bd-um-8DP" id="ctU-zk-mnr"/>
                         <outlet property="state" destination="4Ek-El-ask" id="PUx-2Z-KBK"/>
+                        <outlet property="textField" destination="cRG-g5-n1g" id="71m-vo-c8m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
