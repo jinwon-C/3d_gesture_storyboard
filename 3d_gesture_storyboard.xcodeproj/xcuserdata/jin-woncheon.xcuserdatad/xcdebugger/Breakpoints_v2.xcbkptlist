@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F604F2D0-6D88-4933-A6E2-450AEAAB2937"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7407923-54EF-4962-A015-AA8883B6ED62"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "3d_gesture_storyboard/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "startRecording()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A7407923-54EF-4962-A015-AA8883B6ED62 - 1b350c02718e2be3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_d_gesture_storyboard.ViewController.startRecording() -&gt; ()"
+                  moduleName = "3d_gesture_storyboard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jin-woncheon/workspace/git/3d_gesture_storyboard/3d_gesture_storyboard/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "3843">
+               </Location>
+               <Location
+                  uuid = "A7407923-54EF-4962-A015-AA8883B6ED62 - 7bee97788566e990"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in _d_gesture_storyboard.ViewController.startRecording() -&gt; ()"
+                  moduleName = "3d_gesture_storyboard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jin-woncheon/workspace/git/3d_gesture_storyboard/3d_gesture_storyboard/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "55">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "996013A4-3CDA-436C-95D1-FC406D8AD148"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "3d_gesture_storyboard/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "startRecording()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "996013A4-3CDA-436C-95D1-FC406D8AD148 - 1b350c02718e2be3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_d_gesture_storyboard.ViewController.startRecording() -&gt; ()"
+                  moduleName = "3d_gesture_storyboard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jin-woncheon/workspace/git/3d_gesture_storyboard/3d_gesture_storyboard/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "4275">
+               </Location>
+               <Location
+                  uuid = "996013A4-3CDA-436C-95D1-FC406D8AD148 - 973947c7a766b191"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in _d_gesture_storyboard.ViewController.startRecording() -&gt; ()"
+                  moduleName = "3d_gesture_storyboard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jin-woncheon/workspace/git/3d_gesture_storyboard/3d_gesture_storyboard/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0CDB3DB-3685-4B28-B50A-F2B6462D9DF5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "3d_gesture_storyboard/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "startRecording()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B0CDB3DB-3685-4B28-B50A-F2B6462D9DF5 - 1b350c02718e2be3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_d_gesture_storyboard.ViewController.startRecording() -&gt; ()"
+                  moduleName = "3d_gesture_storyboard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jin-woncheon/workspace/git/3d_gesture_storyboard/3d_gesture_storyboard/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "5452">
+               </Location>
+               <Location
+                  uuid = "B0CDB3DB-3685-4B28-B50A-F2B6462D9DF5 - 6989e6c5e3670193"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #5 () -&gt; () in _d_gesture_storyboard.ViewController.startRecording() -&gt; ()"
+                  moduleName = "3d_gesture_storyboard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jin-woncheon/workspace/git/3d_gesture_storyboard/3d_gesture_storyboard/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "55">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A672D3AB-3E8D-488E-9004-501BC8A2683F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "3d_gesture_storyboard/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "startRecording()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
